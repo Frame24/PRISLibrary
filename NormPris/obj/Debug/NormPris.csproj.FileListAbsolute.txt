@@ -8,3 +8,14 @@ C:\Users\adse3\source\repos\NormPris\NormPris\obj\Debug\NormPris.csproj.Generate
 C:\Users\adse3\source\repos\NormPris\NormPris\obj\Debug\NormPris.csproj.CoreCompileInputs.cache
 C:\Users\adse3\source\repos\NormPris\NormPris\obj\Debug\NormPris.exe
 C:\Users\adse3\source\repos\NormPris\NormPris\obj\Debug\NormPris.pdb
+C:\Users\adse3\source\repos\PRISLibrary\NormPris\bin\Debug\NormPris.exe.config
+C:\Users\adse3\source\repos\PRISLibrary\NormPris\bin\Debug\NormPris.exe
+C:\Users\adse3\source\repos\PRISLibrary\NormPris\bin\Debug\NormPris.pdb
+C:\Users\adse3\source\repos\PRISLibrary\NormPris\obj\Debug\NormPris.csprojAssemblyReference.cache
+C:\Users\adse3\source\repos\PRISLibrary\NormPris\obj\Debug\NormPris.FormMain.resources
+C:\Users\adse3\source\repos\PRISLibrary\NormPris\obj\Debug\NormPris.FormStudent.resources
+C:\Users\adse3\source\repos\PRISLibrary\NormPris\obj\Debug\NormPris.Properties.Resources.resources
+C:\Users\adse3\source\repos\PRISLibrary\NormPris\obj\Debug\NormPris.csproj.GenerateResource.cache
+C:\Users\adse3\source\repos\PRISLibrary\NormPris\obj\Debug\NormPris.csproj.CoreCompileInputs.cache
+C:\Users\adse3\source\repos\PRISLibrary\NormPris\obj\Debug\NormPris.exe
+C:\Users\adse3\source\repos\PRISLibrary\NormPris\obj\Debug\NormPris.pdb
