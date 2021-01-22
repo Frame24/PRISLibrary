@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace NormPris
 {
-    public partial class FormPublishers : Form
+    public partial class FormInstitute : Form
     {
-        public FormPublishers()
+        public FormInstitute()
         {
             InitializeComponent();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void button1_Click(object sender, EventArgs e)
