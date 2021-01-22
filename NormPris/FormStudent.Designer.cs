@@ -81,7 +81,7 @@ namespace NormPris
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(503, 72);
+            this.button1.Location = new System.Drawing.Point(503, 87);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(129, 34);
             this.button1.TabIndex = 3;
@@ -90,7 +90,7 @@ namespace NormPris
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(503, 112);
+            this.button2.Location = new System.Drawing.Point(503, 127);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(129, 34);
             this.button2.TabIndex = 4;
@@ -99,7 +99,7 @@ namespace NormPris
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(503, 152);
+            this.button3.Location = new System.Drawing.Point(503, 259);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(129, 34);
             this.button3.TabIndex = 5;
