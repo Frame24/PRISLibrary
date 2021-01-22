@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace NormPris
 {
-    public partial class FormPublishers : Form
+    public partial class FormLibrarians : Form
     {
-        public FormPublishers()
+        public FormLibrarians()
         {
             InitializeComponent();
         }

@@ -46,11 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAuthors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAuthors.Designer.cs">
+      <DependentUpon>FormAuthors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInstitute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInstitute.Designer.cs">
+      <DependentUpon>FormInstitute.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormJournal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormJournal.Designer.cs">
       <DependentUpon>FormJournal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLibrarians.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLibrarians.Designer.cs">
+      <DependentUpon>FormLibrarians.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
@@ -72,8 +90,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAuthors.resx">
+      <DependentUpon>FormAuthors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInstitute.resx">
+      <DependentUpon>FormInstitute.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormJournal.resx">
       <DependentUpon>FormJournal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLibrarians.resx">
+      <DependentUpon>FormLibrarians.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>

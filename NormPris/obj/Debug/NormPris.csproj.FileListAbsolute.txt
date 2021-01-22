@@ -19,3 +19,8 @@ C:\Users\adse3\source\repos\PRISLibrary\NormPris\obj\Debug\NormPris.csproj.Gener
 C:\Users\adse3\source\repos\PRISLibrary\NormPris\obj\Debug\NormPris.csproj.CoreCompileInputs.cache
 C:\Users\adse3\source\repos\PRISLibrary\NormPris\obj\Debug\NormPris.exe
 C:\Users\adse3\source\repos\PRISLibrary\NormPris\obj\Debug\NormPris.pdb
+C:\Users\adse3\source\repos\PRISLibrary\NormPris\obj\Debug\NormPris.FormAuthors.resources
+C:\Users\adse3\source\repos\PRISLibrary\NormPris\obj\Debug\NormPris.FormInstitute.resources
+C:\Users\adse3\source\repos\PRISLibrary\NormPris\obj\Debug\NormPris.FormJournal.resources
+C:\Users\adse3\source\repos\PRISLibrary\NormPris\obj\Debug\NormPris.FormLibrarians.resources
+C:\Users\adse3\source\repos\PRISLibrary\NormPris\obj\Debug\NormPris.FormPublishers.resources
