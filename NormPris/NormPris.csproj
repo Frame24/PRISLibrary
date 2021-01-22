@@ -46,6 +46,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAuthors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAuthors.Designer.cs">
+      <DependentUpon>FormAuthors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBook.Designer.cs">
+      <DependentUpon>FormBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDirection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDirection.Designer.cs">
+      <DependentUpon>FormDirection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGroup.Designer.cs">
+      <DependentUpon>FormGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInstitute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInstitute.Designer.cs">
+      <DependentUpon>FormInstitute.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormJournal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +108,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAuthors.resx">
+      <DependentUpon>FormAuthors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBook.resx">
+      <DependentUpon>FormBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDirection.resx">
+      <DependentUpon>FormDirection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGroup.resx">
+      <DependentUpon>FormGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInstitute.resx">
+      <DependentUpon>FormInstitute.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormJournal.resx">
       <DependentUpon>FormJournal.cs</DependentUpon>
     </EmbeddedResource>
