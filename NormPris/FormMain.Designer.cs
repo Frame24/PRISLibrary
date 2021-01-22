@@ -42,7 +42,6 @@ namespace NormPris
             this.авторыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.издательстваToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.библиотекарьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -56,8 +55,7 @@ namespace NormPris
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.файлToolStripMenuItem,
-            this.справочникиToolStripMenuItem,
-            this.отчетыToolStripMenuItem});
+            this.справочникиToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(523, 24);
@@ -75,7 +73,7 @@ namespace NormPris
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.выходToolStripMenuItem.Text = "Выход";
             // 
             // справочникиToolStripMenuItem
@@ -97,62 +95,65 @@ namespace NormPris
             // журналToolStripMenuItem
             // 
             this.журналToolStripMenuItem.Name = "журналToolStripMenuItem";
-            this.журналToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.журналToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.журналToolStripMenuItem.Text = "Журнал";
+            this.журналToolStripMenuItem.Click += new System.EventHandler(this.журналToolStripMenuItem_Click);
             // 
             // книгиToolStripMenuItem
             // 
             this.книгиToolStripMenuItem.Name = "книгиToolStripMenuItem";
-            this.книгиToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.книгиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.книгиToolStripMenuItem.Text = "Книги";
+            this.книгиToolStripMenuItem.Click += new System.EventHandler(this.книгиToolStripMenuItem_Click);
             // 
             // студентToolStripMenuItem
             // 
             this.студентToolStripMenuItem.Name = "студентToolStripMenuItem";
-            this.студентToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.студентToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.студентToolStripMenuItem.Text = "Студенты";
+            this.студентToolStripMenuItem.Click += new System.EventHandler(this.студентToolStripMenuItem_Click);
             // 
             // группыToolStripMenuItem
             // 
             this.группыToolStripMenuItem.Name = "группыToolStripMenuItem";
-            this.группыToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.группыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.группыToolStripMenuItem.Text = "Группы";
+            this.группыToolStripMenuItem.Click += new System.EventHandler(this.группыToolStripMenuItem_Click);
             // 
             // направленияToolStripMenuItem
             // 
             this.направленияToolStripMenuItem.Name = "направленияToolStripMenuItem";
-            this.направленияToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.направленияToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.направленияToolStripMenuItem.Text = "Направления";
+            this.направленияToolStripMenuItem.Click += new System.EventHandler(this.направленияToolStripMenuItem_Click);
             // 
             // институтыToolStripMenuItem
             // 
             this.институтыToolStripMenuItem.Name = "институтыToolStripMenuItem";
-            this.институтыToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.институтыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.институтыToolStripMenuItem.Text = "Институты";
+            this.институтыToolStripMenuItem.Click += new System.EventHandler(this.институтыToolStripMenuItem_Click);
             // 
             // авторыToolStripMenuItem
             // 
             this.авторыToolStripMenuItem.Name = "авторыToolStripMenuItem";
-            this.авторыToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.авторыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.авторыToolStripMenuItem.Text = "Авторы";
+            this.авторыToolStripMenuItem.Click += new System.EventHandler(this.авторыToolStripMenuItem_Click);
             // 
             // издательстваToolStripMenuItem
             // 
             this.издательстваToolStripMenuItem.Name = "издательстваToolStripMenuItem";
-            this.издательстваToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.издательстваToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.издательстваToolStripMenuItem.Text = "Издательства";
+            this.издательстваToolStripMenuItem.Click += new System.EventHandler(this.издательстваToolStripMenuItem_Click);
             // 
             // библиотекарьToolStripMenuItem
             // 
             this.библиотекарьToolStripMenuItem.Name = "библиотекарьToolStripMenuItem";
-            this.библиотекарьToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.библиотекарьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.библиотекарьToolStripMenuItem.Text = "Библиотекари";
-            // 
-            // отчетыToolStripMenuItem
-            // 
-            this.отчетыToolStripMenuItem.Name = "отчетыToolStripMenuItem";
-            this.отчетыToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.отчетыToolStripMenuItem.Text = "Отчеты";
+            this.библиотекарьToolStripMenuItem.Click += new System.EventHandler(this.библиотекарьToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -231,7 +232,6 @@ namespace NormPris
         private System.Windows.Forms.ToolStripMenuItem институтыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem авторыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem издательстваToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem отчетыToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem журналToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem книгиToolStripMenuItem;

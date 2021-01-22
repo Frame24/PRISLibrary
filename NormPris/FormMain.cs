@@ -16,5 +16,50 @@ namespace NormPris
         {
             InitializeComponent();
         }
+
+        private void журналToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void книгиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void студентToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void группыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void направленияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void институтыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void авторыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void издательстваToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void библиотекарьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
