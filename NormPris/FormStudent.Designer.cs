@@ -29,9 +29,15 @@ namespace NormPris
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.libCardNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studCardNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -52,6 +58,7 @@ namespace NormPris
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,20 +75,64 @@ namespace NormPris
             // 
             this.textBox1.Location = new System.Drawing.Point(12, 61);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(463, 20);
+            this.textBox1.Size = new System.Drawing.Size(783, 20);
             this.textBox1.TabIndex = 1;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nameDataGridViewTextBoxColumn,
+            this.libCardNumberDataGridViewTextBoxColumn,
+            this.studCardNumberDataGridViewTextBoxColumn,
+            this.groupDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.studentBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 87);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(463, 271);
+            this.dataGridView1.Size = new System.Drawing.Size(783, 271);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "ФИО";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 59;
+            // 
+            // libCardNumberDataGridViewTextBoxColumn
+            // 
+            this.libCardNumberDataGridViewTextBoxColumn.DataPropertyName = "Lib_Card_Number";
+            this.libCardNumberDataGridViewTextBoxColumn.HeaderText = "Номер чит билета";
+            this.libCardNumberDataGridViewTextBoxColumn.Name = "libCardNumberDataGridViewTextBoxColumn";
+            this.libCardNumberDataGridViewTextBoxColumn.Width = 113;
+            // 
+            // studCardNumberDataGridViewTextBoxColumn
+            // 
+            this.studCardNumberDataGridViewTextBoxColumn.DataPropertyName = "Stud_Card_Number";
+            this.studCardNumberDataGridViewTextBoxColumn.HeaderText = "Номер студ билета";
+            this.studCardNumberDataGridViewTextBoxColumn.Name = "studCardNumberDataGridViewTextBoxColumn";
+            this.studCardNumberDataGridViewTextBoxColumn.Width = 118;
+            // 
+            // groupDataGridViewTextBoxColumn
+            // 
+            this.groupDataGridViewTextBoxColumn.DataPropertyName = "Group";
+            this.groupDataGridViewTextBoxColumn.HeaderText = "Группа";
+            this.groupDataGridViewTextBoxColumn.Name = "groupDataGridViewTextBoxColumn";
+            this.groupDataGridViewTextBoxColumn.Width = 67;
+            // 
+            // studentBindingSource
+            // 
+            this.studentBindingSource.DataSource = typeof(NormPris.Student);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(503, 87);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(801, 87);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(129, 34);
             this.button1.TabIndex = 3;
@@ -91,7 +142,8 @@ namespace NormPris
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(503, 127);
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Location = new System.Drawing.Point(801, 127);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(129, 34);
             this.button2.TabIndex = 4;
@@ -101,7 +153,8 @@ namespace NormPris
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(503, 259);
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Location = new System.Drawing.Point(801, 259);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(129, 34);
             this.button3.TabIndex = 5;
@@ -135,7 +188,7 @@ namespace NormPris
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Location = new System.Drawing.Point(15, 45);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(460, 241);
+            this.groupBox1.Size = new System.Drawing.Size(463, 241);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Visible = false;
@@ -261,7 +314,7 @@ namespace NormPris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(664, 386);
+            this.ClientSize = new System.Drawing.Size(954, 386);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button3);
@@ -271,8 +324,10 @@ namespace NormPris
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "FormStudent";
-            this.Text = "Студент";
+            this.Text = "Студенты";
+            this.Load += new System.EventHandler(this.FormStudent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -304,5 +359,10 @@ namespace NormPris
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn libCardNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studCardNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn groupDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource studentBindingSource;
     }
 }

@@ -43,3 +43,9 @@ D:\Пользователи\ПРИС\Библиотека\Лаб4\Прога\Nor
 D:\Пользователи\ПРИС\Библиотека\Лаб4\Прога\NormPris\obj\Debug\NormPris.csproj.CoreCompileInputs.cache
 D:\Пользователи\ПРИС\Библиотека\Лаб4\Прога\NormPris\obj\Debug\NormPris.exe
 D:\Пользователи\ПРИС\Библиотека\Лаб4\Прога\NormPris\obj\Debug\NormPris.pdb
+D:\Пользователи\ПРИС\Библиотека\Лаб4\Прога\NormPris\bin\Debug\EntityFramework.dll
+D:\Пользователи\ПРИС\Библиотека\Лаб4\Прога\NormPris\bin\Debug\EntityFramework.SqlServer.dll
+D:\Пользователи\ПРИС\Библиотека\Лаб4\Прога\NormPris\bin\Debug\EntityFramework.xml
+D:\Пользователи\ПРИС\Библиотека\Лаб4\Прога\NormPris\bin\Debug\EntityFramework.SqlServer.xml
+D:\Пользователи\ПРИС\Библиотека\Лаб4\Прога\NormPris\bin\Debug\ru\EntityFramework.resources.dll
+D:\Пользователи\ПРИС\Библиотека\Лаб4\Прога\NormPris\obj\Debug\NormPris.csproj.CopyComplete

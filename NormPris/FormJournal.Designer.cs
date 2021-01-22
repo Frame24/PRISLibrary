@@ -29,6 +29,7 @@ namespace NormPris
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
@@ -49,10 +50,22 @@ namespace NormPris
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dateGivenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateReturnExpectedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateReturnActualDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.billNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.billDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.billSumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.articleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.librarianDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.journalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.journalBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -209,7 +222,8 @@ namespace NormPris
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(503, 259);
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Location = new System.Drawing.Point(1070, 259);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(129, 34);
             this.button3.TabIndex = 13;
@@ -218,7 +232,8 @@ namespace NormPris
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(503, 127);
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Location = new System.Drawing.Point(1070, 127);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(129, 34);
             this.button2.TabIndex = 12;
@@ -228,7 +243,8 @@ namespace NormPris
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(503, 87);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(1070, 87);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(129, 34);
             this.button1.TabIndex = 11;
@@ -238,11 +254,102 @@ namespace NormPris
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dateGivenDataGridViewTextBoxColumn,
+            this.dateReturnExpectedDataGridViewTextBoxColumn,
+            this.dateReturnActualDataGridViewTextBoxColumn,
+            this.billNumberDataGridViewTextBoxColumn,
+            this.billDateDataGridViewTextBoxColumn,
+            this.billSumDataGridViewTextBoxColumn,
+            this.articleDataGridViewTextBoxColumn,
+            this.bookDataGridViewTextBoxColumn,
+            this.librarianDataGridViewTextBoxColumn,
+            this.studentDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.journalBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 87);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(463, 271);
+            this.dataGridView1.Size = new System.Drawing.Size(1043, 271);
             this.dataGridView1.TabIndex = 10;
+            // 
+            // dateGivenDataGridViewTextBoxColumn
+            // 
+            this.dateGivenDataGridViewTextBoxColumn.DataPropertyName = "Date_Given";
+            this.dateGivenDataGridViewTextBoxColumn.HeaderText = "Дата выдачи";
+            this.dateGivenDataGridViewTextBoxColumn.Name = "dateGivenDataGridViewTextBoxColumn";
+            this.dateGivenDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // dateReturnExpectedDataGridViewTextBoxColumn
+            // 
+            this.dateReturnExpectedDataGridViewTextBoxColumn.DataPropertyName = "Date_Return_Expected";
+            this.dateReturnExpectedDataGridViewTextBoxColumn.HeaderText = "Дата возврата план";
+            this.dateReturnExpectedDataGridViewTextBoxColumn.Name = "dateReturnExpectedDataGridViewTextBoxColumn";
+            this.dateReturnExpectedDataGridViewTextBoxColumn.Width = 123;
+            // 
+            // dateReturnActualDataGridViewTextBoxColumn
+            // 
+            this.dateReturnActualDataGridViewTextBoxColumn.DataPropertyName = "Date_Return_Actual";
+            this.dateReturnActualDataGridViewTextBoxColumn.HeaderText = "Дата возврата факт";
+            this.dateReturnActualDataGridViewTextBoxColumn.Name = "dateReturnActualDataGridViewTextBoxColumn";
+            this.dateReturnActualDataGridViewTextBoxColumn.Width = 124;
+            // 
+            // billNumberDataGridViewTextBoxColumn
+            // 
+            this.billNumberDataGridViewTextBoxColumn.DataPropertyName = "Bill_Number";
+            this.billNumberDataGridViewTextBoxColumn.HeaderText = "Номер счета";
+            this.billNumberDataGridViewTextBoxColumn.Name = "billNumberDataGridViewTextBoxColumn";
+            this.billNumberDataGridViewTextBoxColumn.Width = 89;
+            // 
+            // billDateDataGridViewTextBoxColumn
+            // 
+            this.billDateDataGridViewTextBoxColumn.DataPropertyName = "Bill_Date";
+            this.billDateDataGridViewTextBoxColumn.HeaderText = "Дата счета";
+            this.billDateDataGridViewTextBoxColumn.Name = "billDateDataGridViewTextBoxColumn";
+            this.billDateDataGridViewTextBoxColumn.Width = 82;
+            // 
+            // billSumDataGridViewTextBoxColumn
+            // 
+            this.billSumDataGridViewTextBoxColumn.DataPropertyName = "Bill_Sum";
+            this.billSumDataGridViewTextBoxColumn.HeaderText = "Сумма счета";
+            this.billSumDataGridViewTextBoxColumn.Name = "billSumDataGridViewTextBoxColumn";
+            this.billSumDataGridViewTextBoxColumn.Width = 89;
+            // 
+            // articleDataGridViewTextBoxColumn
+            // 
+            this.articleDataGridViewTextBoxColumn.DataPropertyName = "Article";
+            this.articleDataGridViewTextBoxColumn.HeaderText = "Артикул";
+            this.articleDataGridViewTextBoxColumn.Name = "articleDataGridViewTextBoxColumn";
+            this.articleDataGridViewTextBoxColumn.Width = 73;
+            // 
+            // bookDataGridViewTextBoxColumn
+            // 
+            this.bookDataGridViewTextBoxColumn.DataPropertyName = "Book";
+            this.bookDataGridViewTextBoxColumn.HeaderText = "Книга";
+            this.bookDataGridViewTextBoxColumn.Name = "bookDataGridViewTextBoxColumn";
+            this.bookDataGridViewTextBoxColumn.Width = 62;
+            // 
+            // librarianDataGridViewTextBoxColumn
+            // 
+            this.librarianDataGridViewTextBoxColumn.DataPropertyName = "Librarian";
+            this.librarianDataGridViewTextBoxColumn.HeaderText = "Библиотекарь";
+            this.librarianDataGridViewTextBoxColumn.Name = "librarianDataGridViewTextBoxColumn";
+            this.librarianDataGridViewTextBoxColumn.Width = 104;
+            // 
+            // studentDataGridViewTextBoxColumn
+            // 
+            this.studentDataGridViewTextBoxColumn.DataPropertyName = "Student";
+            this.studentDataGridViewTextBoxColumn.HeaderText = "Студент";
+            this.studentDataGridViewTextBoxColumn.Name = "studentDataGridViewTextBoxColumn";
+            this.studentDataGridViewTextBoxColumn.Width = 72;
+            // 
+            // journalBindingSource
+            // 
+            this.journalBindingSource.DataSource = typeof(NormPris.Journal);
             // 
             // textBox1
             // 
@@ -256,15 +363,15 @@ namespace NormPris
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 13);
+            this.label1.Size = new System.Drawing.Size(120, 13);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Справочник \"Журналы\"";
+            this.label1.Text = "Справочник \"Журнал\"";
             // 
             // FormJournal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(659, 386);
+            this.ClientSize = new System.Drawing.Size(1211, 386);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button3);
@@ -275,9 +382,11 @@ namespace NormPris
             this.Controls.Add(this.label1);
             this.Name = "FormJournal";
             this.Text = "Журнал";
+            this.Load += new System.EventHandler(this.FormJournal_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.journalBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,5 +416,16 @@ namespace NormPris
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.BindingSource journalBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateGivenDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateReturnExpectedDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateReturnActualDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn billNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn billDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn billSumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn articleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn librarianDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studentDataGridViewTextBoxColumn;
     }
 }

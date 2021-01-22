@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -48,6 +49,18 @@ namespace NormPris
             label2.Visible = true;
             textBox1.Visible = true;
             groupBox1.Visible = false;
+        }
+
+        private void FormJournal_Load(object sender, EventArgs e)
+        {
+            var dbo = new LibraryEntities();
+            dbo.Journal.Load();
+            dataGridView1.DataSource = dbo.Journal.Local.ToBindingList();
+
+            dbo.Student.Load();
+            comboBox1.DataSource = dbo.Student.Local.ToBindingList();
+            dbo.Book.Load();
+            comboBox2.DataSource = dbo.Book.Local.ToBindingList();
         }
     }
 }

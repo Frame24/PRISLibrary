@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LibraryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Author">
+    <Key>
+      <PropertyRef Name="ID_Author" />
+    </Key>
+    <Property Name="ID_Author" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Book" Relationship="Self.Book_Author" FromRole="Author" ToRole="Book" />
+  </EntityType>
+  <EntityType Name="Book">
+    <Key>
+      <PropertyRef Name="ID_Book" />
+    </Key>
+    <Property Name="ID_Book" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Year" Type="Int32" Nullable="false" />
+    <Property Name="Count" Type="Int32" />
+    <Property Name="PublishingHouse_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="PublishingHouse" Relationship="Self.FK_Book_PublishingHouse" FromRole="Book" ToRole="PublishingHouse" />
+    <NavigationProperty Name="Journal" Relationship="Self.FK_Journal_Book" FromRole="Book" ToRole="Journal" />
+    <NavigationProperty Name="Author" Relationship="Self.Book_Author" FromRole="Book" ToRole="Author" />
+  </EntityType>
+  <EntityType Name="Direction">
+    <Key>
+      <PropertyRef Name="ID_Direction" />
+    </Key>
+    <Property Name="ID_Direction" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Institute_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Institute" Relationship="Self.FK_Direction_Institute" FromRole="Direction" ToRole="Institute" />
+    <NavigationProperty Name="Group" Relationship="Self.FK_Group_Direction" FromRole="Direction" ToRole="Group" />
+  </EntityType>
+  <EntityType Name="Group">
+    <Key>
+      <PropertyRef Name="ID_Group" />
+    </Key>
+    <Property Name="ID_Group" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Direction_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Direction" Relationship="Self.FK_Group_Direction" FromRole="Group" ToRole="Direction" />
+    <NavigationProperty Name="Student" Relationship="Self.FK_Student_Group" FromRole="Group" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="Institute">
+    <Key>
+      <PropertyRef Name="ID_Institute" />
+    </Key>
+    <Property Name="ID_Institute" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Direction" Relationship="Self.FK_Direction_Institute" FromRole="Institute" ToRole="Direction" />
+  </EntityType>
+  <EntityType Name="Journal">
+    <Key>
+      <PropertyRef Name="ID_Journal" />
+    </Key>
+    <Property Name="ID_Journal" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date_Given" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Date_Return_Expected" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Date_Return_Actual" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Bill_Number" Type="Int32" />
+    <Property Name="Bill_Date" Type="DateTime" Precision="0" />
+    <Property Name="Bill_Sum" Type="Double" />
+    <Property Name="Article" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Student_ID" Type="Int32" />
+    <Property Name="Librarian_ID" Type="Int32" Nullable="false" />
+    <Property Name="Book_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Book" Relationship="Self.FK_Journal_Book" FromRole="Journal" ToRole="Book" />
+    <NavigationProperty Name="Librarian" Relationship="Self.FK_Journal_Librarian" FromRole="Journal" ToRole="Librarian" />
+    <NavigationProperty Name="Student" Relationship="Self.FK_Journal_Student" FromRole="Journal" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="Librarian">
+    <Key>
+      <PropertyRef Name="ID_Librarian" />
+    </Key>
+    <Property Name="ID_Librarian" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Journal" Relationship="Self.FK_Journal_Librarian" FromRole="Librarian" ToRole="Journal" />
+  </EntityType>
+  <EntityType Name="PublishingHouse">
+    <Key>
+      <PropertyRef Name="ID_PublishingHouse" />
+    </Key>
+    <Property Name="ID_PublishingHouse" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Book" Relationship="Self.FK_Book_PublishingHouse" FromRole="PublishingHouse" ToRole="Book" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="ID_Student" />
+    </Key>
+    <Property Name="ID_Student" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Lib_Card_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Lib_Card_Date" Type="DateTime" Precision="0" />
+    <Property Name="Stud_Card_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Stud_Card_Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Group_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Group" Relationship="Self.FK_Student_Group" FromRole="Student" ToRole="Group" />
+    <NavigationProperty Name="Journal" Relationship="Self.FK_Journal_Student" FromRole="Student" ToRole="Journal" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Book_PublishingHouse">
+    <End Role="PublishingHouse" Type="Self.PublishingHouse" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Book" Type="Self.Book" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PublishingHouse">
+        <PropertyRef Name="ID_PublishingHouse" />
+      </Principal>
+      <Dependent Role="Book">
+        <PropertyRef Name="PublishingHouse_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Journal_Book">
+    <End Role="Book" Type="Self.Book" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Journal" Type="Self.Journal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Book">
+        <PropertyRef Name="ID_Book" />
+      </Principal>
+      <Dependent Role="Journal">
+        <PropertyRef Name="Book_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Direction_Institute">
+    <End Role="Institute" Type="Self.Institute" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Direction" Type="Self.Direction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Institute">
+        <PropertyRef Name="ID_Institute" />
+      </Principal>
+      <Dependent Role="Direction">
+        <PropertyRef Name="Institute_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Group_Direction">
+    <End Role="Direction" Type="Self.Direction" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Group" Type="Self.Group" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Direction">
+        <PropertyRef Name="ID_Direction" />
+      </Principal>
+      <Dependent Role="Group">
+        <PropertyRef Name="Direction_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_Group">
+    <End Role="Group" Type="Self.Group" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Group">
+        <PropertyRef Name="ID_Group" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="Group_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Journal_Librarian">
+    <End Role="Librarian" Type="Self.Librarian" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Journal" Type="Self.Journal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Librarian">
+        <PropertyRef Name="ID_Librarian" />
+      </Principal>
+      <Dependent Role="Journal">
+        <PropertyRef Name="Librarian_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Journal_Student">
+    <End Role="Student" Type="Self.Student" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Journal" Type="Self.Journal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="ID_Student" />
+      </Principal>
+      <Dependent Role="Journal">
+        <PropertyRef Name="Student_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Book_Author">
+    <End Role="Author" Type="Self.Author" Multiplicity="*" />
+    <End Role="Book" Type="Self.Book" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="LibraryEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Author" EntityType="Self.Author" />
+    <EntitySet Name="Book" EntityType="Self.Book" />
+    <EntitySet Name="Direction" EntityType="Self.Direction" />
+    <EntitySet Name="Group" EntityType="Self.Group" />
+    <EntitySet Name="Institute" EntityType="Self.Institute" />
+    <EntitySet Name="Journal" EntityType="Self.Journal" />
+    <EntitySet Name="Librarian" EntityType="Self.Librarian" />
+    <EntitySet Name="PublishingHouse" EntityType="Self.PublishingHouse" />
+    <EntitySet Name="Student" EntityType="Self.Student" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <AssociationSet Name="FK_Book_PublishingHouse" Association="Self.FK_Book_PublishingHouse">
+      <End Role="PublishingHouse" EntitySet="PublishingHouse" />
+      <End Role="Book" EntitySet="Book" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Journal_Book" Association="Self.FK_Journal_Book">
+      <End Role="Book" EntitySet="Book" />
+      <End Role="Journal" EntitySet="Journal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Direction_Institute" Association="Self.FK_Direction_Institute">
+      <End Role="Institute" EntitySet="Institute" />
+      <End Role="Direction" EntitySet="Direction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Group_Direction" Association="Self.FK_Group_Direction">
+      <End Role="Direction" EntitySet="Direction" />
+      <End Role="Group" EntitySet="Group" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_Group" Association="Self.FK_Student_Group">
+      <End Role="Group" EntitySet="Group" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Journal_Librarian" Association="Self.FK_Journal_Librarian">
+      <End Role="Librarian" EntitySet="Librarian" />
+      <End Role="Journal" EntitySet="Journal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Journal_Student" Association="Self.FK_Journal_Student">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="Journal" EntitySet="Journal" />
+    </AssociationSet>
+    <AssociationSet Name="Book_Author" Association="Self.Book_Author">
+      <End Role="Author" EntitySet="Author" />
+      <End Role="Book" EntitySet="Book" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
