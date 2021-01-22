@@ -16,7 +16,7 @@ namespace NormPris
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormPublishers());
+            Application.Run(new FormMain());
         }
     }
 }
