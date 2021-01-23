@@ -17,26 +17,27 @@ namespace NormPris
         {
             InitializeComponent();
         }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             dataGridView1.Visible = false;
             label2.Visible = false;
             textBox1.Visible = false;
             groupBox1.Visible = true;
+            button1.Enabled = false;
+            button2.Enabled = false;
+            button3.Enabled = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             dataGridView1.Visible = false;
             label2.Visible = false;
             textBox1.Visible = false;
             groupBox1.Visible = true;
+            button1.Enabled = false;
+            button2.Enabled = false;
+            button3.Enabled = false;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -45,6 +46,9 @@ namespace NormPris
             label2.Visible = true;
             textBox1.Visible = true;
             groupBox1.Visible = false;
+            button1.Enabled = true;
+            button2.Enabled = true;
+            button3.Enabled = true;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -53,6 +57,9 @@ namespace NormPris
             label2.Visible = true;
             textBox1.Visible = true;
             groupBox1.Visible = false;
+            button1.Enabled = true;
+            button2.Enabled = true;
+            button3.Enabled = true;
         }
 
         private void FormInstitute_Load(object sender, EventArgs e)
