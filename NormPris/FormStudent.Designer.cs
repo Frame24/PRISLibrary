@@ -154,7 +154,7 @@ namespace NormPris
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(801, 259);
+            this.button3.Location = new System.Drawing.Point(801, 166);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(129, 34);
             this.button3.TabIndex = 5;

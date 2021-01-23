@@ -40,10 +40,10 @@ namespace NormPris
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.authorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.authorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.authorBindingSource)).BeginInit();
@@ -109,7 +109,7 @@ namespace NormPris
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(503, 259);
+            this.button3.Location = new System.Drawing.Point(503, 167);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(129, 34);
             this.button3.TabIndex = 13;
@@ -152,6 +152,17 @@ namespace NormPris
             this.dataGridView1.Size = new System.Drawing.Size(463, 271);
             this.dataGridView1.TabIndex = 10;
             // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "ФИО";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 59;
+            // 
+            // authorBindingSource
+            // 
+            this.authorBindingSource.DataSource = typeof(NormPris.Author);
+            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(12, 61);
@@ -167,17 +178,6 @@ namespace NormPris
             this.label1.Size = new System.Drawing.Size(118, 13);
             this.label1.TabIndex = 8;
             this.label1.Text = "Справочник \"Авторы\"";
-            // 
-            // authorBindingSource
-            // 
-            this.authorBindingSource.DataSource = typeof(NormPris.Author);
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "ФИО";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 59;
             // 
             // FormAuthors
             // 

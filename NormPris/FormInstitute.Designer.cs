@@ -40,10 +40,10 @@ namespace NormPris
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.instituteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.instituteBindingSource)).BeginInit();
@@ -110,7 +110,7 @@ namespace NormPris
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(503, 261);
+            this.button3.Location = new System.Drawing.Point(509, 169);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(129, 34);
             this.button3.TabIndex = 13;
@@ -120,7 +120,7 @@ namespace NormPris
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(503, 129);
+            this.button2.Location = new System.Drawing.Point(509, 129);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(129, 34);
             this.button2.TabIndex = 12;
@@ -131,7 +131,7 @@ namespace NormPris
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(503, 89);
+            this.button1.Location = new System.Drawing.Point(509, 89);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(129, 34);
             this.button1.TabIndex = 11;
@@ -152,8 +152,19 @@ namespace NormPris
             this.dataGridView1.DataSource = this.instituteBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 89);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(463, 271);
+            this.dataGridView1.Size = new System.Drawing.Size(466, 271);
             this.dataGridView1.TabIndex = 10;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Наименование";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 108;
+            // 
+            // instituteBindingSource
+            // 
+            this.instituteBindingSource.DataSource = typeof(NormPris.Institute);
             // 
             // textBox1
             // 
@@ -171,22 +182,11 @@ namespace NormPris
             this.label1.TabIndex = 8;
             this.label1.Text = "Справочник \"Институты\"";
             // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Наименование";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 108;
-            // 
-            // instituteBindingSource
-            // 
-            this.instituteBindingSource.DataSource = typeof(NormPris.Institute);
-            // 
             // FormInstitute
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 381);
+            this.ClientSize = new System.Drawing.Size(650, 381);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button3);
